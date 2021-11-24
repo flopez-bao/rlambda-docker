@@ -15,6 +15,7 @@ You should run the most recent version of `Docker` and have access to `aws cli` 
 5. Push container to ECR: `aws ecr get-login-password | docker login --username AWS --password-stdin <repositoryUri>/rlambda && docker push <respositoryUri>/rlambda:latest`.
 6. Once the container is uploaded create a lambda function and choose container image as the source. Choose the container image URI of the docker container you just pushed. 
 7. Create the function and then configure the timeout settings to 30 seconds or more and edit the image configuration for CMD to point to the function you want to call such as `functions.filterPosts`.
+8. Function `filterPosts` shows how to incorporate library call for a function within the docker container. 
 
 # Credits
 
